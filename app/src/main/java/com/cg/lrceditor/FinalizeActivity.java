@@ -43,6 +43,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Locale;
+import com.cg.lrceditor.R;
 
 public class FinalizeActivity extends AppCompatActivity {
 

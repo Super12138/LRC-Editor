@@ -31,6 +31,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.cg.lrceditor.R;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;

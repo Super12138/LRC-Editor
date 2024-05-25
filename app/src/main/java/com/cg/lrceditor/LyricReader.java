@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import com.cg.lrceditor.R;
 import java.util.Collections;
 import java.util.Comparator;
 

@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.cg.lrceditor.R;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;

@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import com.cg.lrceditor.R;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
