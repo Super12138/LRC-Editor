@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-	compileSdkVersion 29
-	buildToolsVersion "29.0.3"
+	namespace 'com.cg.lrceditor'
+	compileSdk 34
 
 	defaultConfig {
 		applicationId "com.cg.lrceditor"
