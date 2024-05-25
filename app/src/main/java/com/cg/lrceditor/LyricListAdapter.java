@@ -210,7 +210,7 @@ public class LyricListAdapter extends RecyclerView.Adapter<LyricListAdapter.Lyri
 			decrTime.setOnClickListener(v ->{ 
 v.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
 			
-clickListener.onDecreaseTimeClick(getAdapterPosition())
+clickListener.onDecreaseTimeClick(getAdapterPosition());
 });
 
 			decrTime.setOnLongClickListener(v -> {		clickListener.onLongPressDecrTime(getAdapterPosition());
