@@ -348,11 +348,6 @@ public class FinalizeActivity extends AppCompatActivity {
 		if (!str.isEmpty())
 			sb.append("[by: ").append(str).append("]\n");
 
-		sb.append("\n")
-				.append("[re: ").append(getString(R.string.app_name)).append(" - Android app").append("]\n")
-				.append("[ve: ").append("Version ").append(BuildConfig.VERSION_NAME).append("]\n")
-				.append("\n");
-
 		for (int i = 0, len = lyricData.size(); i < len; i++) {
 			Timestamp timestamp = lyricData.get(i).getTimestamp();
 			if (timestamp != null) {

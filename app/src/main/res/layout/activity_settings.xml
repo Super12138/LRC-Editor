@@ -136,7 +136,6 @@
 				</LinearLayout>
 
 				<Button
-					style="@style/Widget.AppCompat.Button.Borderless.Colored"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight=".1"
@@ -161,7 +160,7 @@
 				android:orientation="horizontal"
 				android:padding="@dimen/dp16">
 
-				<Switch
+				<com.google.android.material.materialswitch.MaterialSwitch
 					android:id="@+id/three_digit_milliseconds_switch"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
@@ -169,7 +168,6 @@
 					android:text="@string/three_digit_milliseconds_prompt" />
 
 				<Button
-					style="@style/Widget.AppCompat.Button.Borderless.Colored"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight=".1"

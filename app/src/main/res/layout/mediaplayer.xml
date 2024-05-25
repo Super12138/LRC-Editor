@@ -136,6 +136,7 @@
 			android:text="@string/previous_5" />
 
 		<ImageButton
+			style="?attr/materialIconButtonFilledStyle"
 			android:id="@+id/play_pause"
 			android:layout_width="0dp"
 			android:layout_height="match_parent"

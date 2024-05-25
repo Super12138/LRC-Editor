@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.cg.lrceditor.R;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,10 +18,10 @@ import java.util.ArrayList;
 public class LyricListAdapter extends RecyclerView.Adapter<LyricListAdapter.LyricListItem> {
 	final ArrayList<LyricItem> lyricData;
 
-	private boolean isDarkTheme;
+	private final boolean isDarkTheme;
 
-	private LayoutInflater inflater;
-	private SparseBooleanArray flashItems;
+	private final LayoutInflater inflater;
+	private final SparseBooleanArray flashItems;
 	private ItemClickListener clickListener;
 
 	LyricListAdapter(Context context, ArrayList<LyricItem> lyricData, boolean isDarkTheme) {
@@ -152,7 +151,7 @@ public class LyricListAdapter extends RecyclerView.Adapter<LyricListAdapter.Lyri
 	}
 
 	class LyricListItem extends RecyclerView.ViewHolder implements View.OnLongClickListener,
-			View.OnClickListener {
+		View.OnClickListener {
 		final LyricListAdapter adapter;
 		private final LinearLayout linearLayout;
 		private final TextView itemTextview;
@@ -183,9 +182,15 @@ public class LyricListAdapter extends RecyclerView.Adapter<LyricListAdapter.Lyri
 				itemAdd.setImageDrawable(ctx.getDrawable(R.drawable.ic_add_light));
 			}
 
-			itemAdd.setOnClickListener(v -> clickListener.onAddButtonClick(getAdapterPosition()));
+			itemAdd.setOnClickListener(v -> {
+				itemAdd.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
+				clickListener.onAddButtonClick(getAdapterPosition());
+			});
 
-			itemPlay.setOnClickListener(v -> clickListener.onPlayButtonClick(getAdapterPosition()));
+			itemPlay.setOnClickListener(v -> {
+				itemPlay.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK);
+				clickListener.onPlayButtonClick(getAdapterPosition());
+			});
 
 			ImageButton incrTime = itemView.findViewById(R.id.increase_time_button);
 			ImageButton decrTime = itemView.findViewById(R.id.decrease_time_button);
