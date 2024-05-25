@@ -195,18 +195,21 @@ public class LyricListAdapter extends RecyclerView.Adapter<LyricListAdapter.Lyri
 			ImageButton incrTime = itemView.findViewById(R.id.increase_time_button);
 			ImageButton decrTime = itemView.findViewById(R.id.decrease_time_button);
 
-			incrTime.setOnClickListener(v -> clickListener.onIncreaseTimeClick(getAdapterPosition()));
-
-			incrTime.setOnLongClickListener(v -> {
+		incrTime.setOnLongClickListener(v -> {
 				clickListener.onLongPressIncrTime(getAdapterPosition());
 				v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
 				return false;
 			});
 
-			decrTime.setOnClickListener(v -> clickListener.onDecreaseTimeClick(getAdapterPosition()));
 
-			decrTime.setOnLongClickListener(v -> {
-				clickListener.onLongPressDecrTime(getAdapterPosition());
+			incrTime.setOnLongClickListener(v -> {	clickListener.onLongPressIncrTime(getAdapterPosition());
+				v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+				return false;
+			});
+
+			decrTime.setOnClickListener(v - clickListener.onDecreaseTimeClick(getAdapterPosition()));
+
+			decrTime.setOnLongClickListener(v -> {		clickListener.onLongPressDecrTime(getAdapterPosition());
 				v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
 				return false;
 			});
