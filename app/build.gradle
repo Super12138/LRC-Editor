@@ -28,19 +28,19 @@ android
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
-  flavorDimensions "target_app_store"
-  productFlavors
-  {
-    playstore
-    {
-      dimension "target_app_store"
-        // Dimensions aren't required since there's only 1, added for brevity
-    }
-    fdroid
-    {
-      dimension "target_app_store"
-    }
-  }
+  // flavorDimensions "target_app_store"
+  // productFlavors
+  // {
+  //   playstore
+  //   {
+  //     dimension "target_app_store"
+  //       // Dimensions aren't required since there's only 1, added for brevity
+  //   }
+  //   fdroid
+  //   {
+  //     dimension "target_app_store"
+  //   }
+  // }
   compileOptions
   {
     encoding = 'UTF-8'
