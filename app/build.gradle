@@ -63,6 +63,4 @@ dependencies
   implementation 'androidx.recyclerview:recyclerview:1.3.2'
   implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
   implementation 'com.google.android.material:material:1.13.0-alpha02'
-    // Updating material to 1.1.0 results in a 20% increase in APK size
-  playstoreImplementation "com.android.billingclient:billing:3.0.2"
 }
