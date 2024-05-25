@@ -1,42 +1,25 @@
 <resources>
 
-	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-		<item name="colorPrimary">@color/colorPrimary</item>
-		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-		<item name="colorAccent">@color/colorAccent</item>
+	<style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+		<item name="windowActionModeOverlay">true</item>
+		<item name="windowActionBar">false</item>
+	</style>
+
+	<style name="AppThemeDark" parent="Theme.Material3.Dark.NoActionBar">
 
 		<item name="windowActionModeOverlay">true</item>
 		<item name="windowActionBar">false</item>
 	</style>
 
-	<style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
-		<item name="colorPrimary">@color/colorPrimary</item>
-		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-		<item name="colorAccent">@color/colorAccent</item>
-
-		<item name="android:navigationBarColor">@android:color/black</item>
-
+	<style name="AppThemeDarker" parent="Theme.Material3.Dark.NoActionBar">
 		<item name="windowActionModeOverlay">true</item>
 		<item name="windowActionBar">false</item>
 	</style>
 
-	<style name="AppThemeDarker" parent="Theme.AppCompat.NoActionBar">
-		<item name="colorPrimary">#262626</item>
-		<item name="colorPrimaryDark">#000000</item>
-		<item name="colorAccent">@color/colorAccent</item>
+	<style name="AppThemeDark.PopupOverlay" parent="ThemeOverlay.Material3.Dark" />
 
-		<item name="android:windowBackground">@android:color/black</item>
-		<item name="android:navigationBarColor">@android:color/black</item>
-		<item name="android:actionBarStyle">@android:color/black</item>
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.Material3.Dark" />
 
-		<item name="windowActionModeOverlay">true</item>
-		<item name="windowActionBar">false</item>
-	</style>
-
-	<style name="AppThemeDark.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
-
-	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
-
-	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.Material3.Light" />
 
 </resources>

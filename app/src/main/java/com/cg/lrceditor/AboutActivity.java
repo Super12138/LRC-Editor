@@ -62,11 +62,6 @@ public class AboutActivity extends AppCompatActivity {
 		maintainerInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
 		TextView version = findViewById(R.id.app_version);
-		if (BuildConfig.DEBUG) {
-			version.setText(String.format(Locale.getDefault(), "Version %s (Debug Build %s)", BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE));
-		} else {
-			version.setText(String.format(Locale.getDefault(), "Version %s (Build %s)", BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE));
-		}
 	}
 
 	public void viewApp(View view) {
@@ -83,7 +78,6 @@ public class AboutActivity extends AppCompatActivity {
 		deviceInfo += "\n OS API Level: " + Build.VERSION.SDK_INT;
 		deviceInfo += "\n Device: " + Build.DEVICE;
 		deviceInfo += "\n Model and Product: " + Build.MODEL + " (" + Build.PRODUCT + ")";
-		deviceInfo += "\n LRC Editor version " + BuildConfig.VERSION_NAME + " (Build (F-Droid): " + BuildConfig.VERSION_CODE + ")";
 
 		Intent selectorIntent = new Intent(Intent.ACTION_SENDTO);
 		selectorIntent.setData(Uri.parse("mailto:"));
