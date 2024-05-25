@@ -1,66 +1,57 @@
 apply plugin: 'com.android.application'
-android
-{
-  namespace 'com.cg.lrceditor'
-  compileSdk 34
-  defaultConfig
-  {
-    applicationId "com.cg.lrceditor"
-    minSdkVersion 21
-    targetSdkVersion 34
-    versionCode 56
-    versionName "3.2.6"
-      // Targeting Android 11 (API level 30) or above might result in the app not being able
-      // to read/write to storage because of the "Scoped Storage" enforcement
-    vectorDrawables.useSupportLibrary = true
-  }
-  buildTypes
-  {
-    release
-    {
-      minifyEnabled true
-      shrinkResources true
-      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-    }
-    debug
-    {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    }
-  }
-  // flavorDimensions "target_app_store"
-  // productFlavors
-  // {
-  //   playstore
-  //   {
-  //     dimension "target_app_store"
-  //       // Dimensions aren't required since there's only 1, added for brevity
-  //   }
-  //   fdroid
-  //   {
-  //     dimension "target_app_store"
-  //   }
-  // }
-  compileOptions
-  {
-    encoding = 'UTF-8'
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
-  }
-  packagingOptions
-  {
-    exclude 'META-INF/*'
-  }
-  buildFeatures
-  {
-    buildConfig = true
-  }
+android {
+	namespace 'com.cg.lrceditor'
+	compileSdk 34
+	defaultConfig {
+		applicationId "com.cg.lrceditor"
+		minSdkVersion 21
+		targetSdkVersion 34
+		versionCode 56
+		versionName "3.2.6"
+		// Targeting Android 11 (API level 30) or above might result in the app not being able
+		// to read/write to storage because of the "Scoped Storage" enforcement
+		vectorDrawables.useSupportLibrary = true
+	}
+	buildTypes {
+		release {
+			minifyEnabled true
+			shrinkResources true
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+		debug {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+	// flavorDimensions "target_app_store"
+	// productFlavors
+	// {
+	//   playstore
+	//   {
+	//     dimension "target_app_store"
+	//       // Dimensions aren't required since there's only 1, added for brevity
+	//   }
+	//   fdroid
+	//   {
+	//     dimension "target_app_store"
+	//   }
+	// }
+	compileOptions {
+		encoding = 'UTF-8'
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+	packagingOptions {
+		exclude 'META-INF/*'
+	}
+	buildFeatures {
+		buildConfig = true
+	}
 }
-dependencies
-{
-  implementation 'androidx.appcompat:appcompat:1.6.1'
-  implementation 'androidx.documentfile:documentfile:1.0.1'
-  implementation 'androidx.recyclerview:recyclerview:1.3.2'
-  implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-  implementation 'com.google.android.material:material:1.13.0-alpha02'
+dependencies {
+	implementation 'androidx.appcompat:appcompat:1.6.1'
+	implementation 'androidx.documentfile:documentfile:1.0.1'
+	implementation 'androidx.recyclerview:recyclerview:1.3.2'
+	implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+	implementation 'com.google.android.material:material:1.13.0-alpha02'
 }
