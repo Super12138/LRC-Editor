@@ -11,12 +11,12 @@
 		android:label="@string/app_name"
 		android:requestLegacyExternalStorage="true"
 		android:roundIcon="@mipmap/ic_launcher_round"
-		android:screenOrientation="portrait"
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
 		<activity
 			android:name=".HomePage"
-			android:label="@string/app_name"
+
+			android:exported="true"
 			android:theme="@style/AppTheme">
 
 			<intent-filter>
@@ -30,9 +30,11 @@
 		</activity>
 		<activity
 			android:name=".CreateActivity"
+			android:exported="false"
 			android:label="@string/create" />
 		<activity
 			android:name=".EditorActivity"
+			android:exported="true"
 			android:configChanges="orientation|screenLayout|smallestScreenSize|screenSize|uiMode"
 			android:label="@string/editor">
 			<intent-filter>
@@ -51,12 +53,15 @@
 		</activity>
 		<activity
 			android:name=".AboutActivity"
+			android:exported="false"
 			android:label="@string/about" />
 		<activity
 			android:name=".FinalizeActivity"
+			android:exported="false"
 			android:label="@string/finalization" />
 		<activity
 			android:name=".SettingsActivity"
+			android:exported="false"
 			android:label="@string/settings" />
 	</application>
 

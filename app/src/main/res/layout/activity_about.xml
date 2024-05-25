@@ -86,7 +86,7 @@
 				android:drawableEnd="@drawable/ic_open_in_new"
 				android:drawablePadding="@dimen/dp5"
 				android:onClick="viewApp"
-				android:text="@string/view_the_app_on_f_droid" />
+				android:text="View App" />
 
 			<Button
 				android:id="@+id/send_feedback_button"
